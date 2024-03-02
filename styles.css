@@ -1,0 +1,172 @@
+#divBlock1{
+  display: flex;
+  justify-content: center;
+}
+
+#divBlock2{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+
+#inputTeamName{
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between;
+  align-content: center; */
+  margin: 10px;
+}
+
+.button{
+  background-color: rgb(186, 186, 247);
+  padding: 0.8rem 2rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-weight: bold;
+  margin-right: 1rem;
+  margin: auto;
+}
+
+.buttonCreateTeam{
+  align-self: flex-start;
+}
+
+.button:hover {
+  opacity: 0.8;
+}
+
+.button.active {
+  background: #3e6ae1;
+  color: #fff;
+}
+
+.container {
+    display: flex;
+    gap: 20px;
+    margin: auto;
+    margin-top: 20px;
+  }
+  
+  .divTeam {
+    background-color: greenyellow;
+    height: 300px;
+    width: 200px;
+    margin: auto;
+    text-align: center;
+    vertical-align: auto;
+    border-radius: 15px;
+  }
+  
+  .visibility-hidden {
+    visibility: hidden;
+    height:   5 px;
+  }
+
+  .visibility-visible {
+    visibility: visible;
+  }
+
+  .teams{
+    display: inline
+  }
+
+  .gameArea{
+    display: flex;
+    justify-content: center;
+  }
+
+  #pInstructionsBlock4{
+    display: flex;
+    justify-content: center; 
+  }
+
+  .verticalflex{
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+  }
+
+  .horizont { float: left; /*Задаем обтекание*/
+     line-height: 120px;/*Высота строки + верт. центрирования текста*/ 
+     font-size: 40px; 
+     margin-top: 60px; 
+     width: 320px; /*Фиксируем ширину блока*/ 
+     margin-right: 10px;
+     text-align: center; /*Центрируем текст по горизонтали*/
+  }
+
+.coloredBackground{
+  background-color: peachpuff;
+}
+
+.inputInputTeamName{
+  align-self: center; 
+  width:12%;
+}
+
+.results{
+  justify-content: center;
+  align-content: center;
+  /* flex-direction: column; */
+}
+  
+.pWinner{
+  font-size: large;
+  font-weight: bold;
+  color: aqua;
+  background-color: blue;
+  border-radius: 15px;
+}
+
+.playAgain{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.bckBlue{
+  background: rgb(241, 188, 109); 
+}
+
+
+.display-none{
+  display: none;
+  height:  5px;
+}
+
+
+
+.label{
+  align-self: center;
+  margin: 10px;
+}
+
+.fillingUpWords{
+  /* align-self: center; */
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+}
+
+.colortextRed{
+  color: red;
+  font-weight: bold;
+  text-decoration:underline
+}
+
+.colortextGreen{
+  color: green;
+  font-weight: bold;
+  text-decoration:underline
+}
+
+.backgroundColorRed{
+  background-color: red;
+}
+
+.backgroundColorGreen{
+  background-color: green;
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Hat Vanilla JS</title>
+    <link rel="stylesheet" href="./styles.css">
+    <script src="./app.js" defer></script>
+</head>
+<body>
+
+    <!-- blockOne:) 1. Messages to user-->
+    <div id="divBlock1">
+        <button id="btnStartGame" class="button">Start game</button>
+    </div>
+
+    <!--2. block reflecting name of teams and its members-->
+    <div id="divBlock2">
+        <div id = "inputTeamName">
+            <input type="text" id="teamName" class = "inputInputTeamName visibility-hidden" placeholder="Введите название команды" autocomplete="off">
+            <button id = 'saveTeamName' class = "button buttonCreateTeam visibility-hidden">Создать команду</button> 
+            <!-- <button id = 'teamNamesSaved' class = "buttonCreateTeam visibility-hidden">Команды и их состав заполнен!</button>  -->
+        </div> 
+        <div class="container visibility-hidden" id="teams"></div>
+        <button id = 'teamNamesSaved' class = "button buttonCreateTeam visibility-hidden">Команды и их состав заполнен!</button> 
+    </div>
+  
+    <!--3. block for filling up list of words for game-->
+    <div id="divBlock3" class="fillingUpWords visibility-hidden">
+        <div>
+            <p id = "fillUpWord" class="fillingUpWords visibility-hidden">Игрок X команды Y введите список из 7 своих слов</p>
+            <label id = "labelInputWords" class="visibility-hidden">Введите слово:             
+                <input type="text" id = "ttemp" class="bckBlue visibility-hidden" autocomplete="off">
+            </label>
+            <button id="addWord" class="button visibility-hidden">Добавить</button>
+            <ul id ="wordsOfPlayer" class="coloredBackground visibility-hidden"></ul>
+        </div>
+    </div>
+
+<!--4. Main block for process of the game-->
+<div id="divBlock4" class="gameArea visibility-hidden">
+    <div class="verticalflex">
+    <p id="pInstructionsBlock4">Игрок Х команды У Ваш ход! </p>
+    <br>
+    <button id = 'startStep' class="button  visibility-hidden">Начать</button>
+    <ul id="wordsInGame" class="coloredBackground"> Слова для объяснения:
+        <!-- <li
+          class="list-group-item d-flex justify-content-between align-items-center"
+        >
+          <span>Название</span>
+          <span>
+            <span class="btn btn-small btn-success">&check;</span>
+            <span class="btn btn-small btn-danger">&times;</span>
+          </span>
+        </li> -->
+    </ul>
+    <button id = 'finishStep' class="button  visibility-hidden">Передать ход следующему игроку</button>
+    </div>
+</div>
+
+<!--6. block for results-->
+<div id="divBlock5" class="container results visibility-hidden">
+    <h3>Результаты игры</h3>
+    <br>
+    <p id="winner"></p>
+</div>
+<button id="playAgain" class="playAgain button visibility-hidden">Сыграть заново</button>
+
+<!--6. block for example of different stuff-->
+<div id="divBlock6" class="stuff">
+    <p>
+        <button id = 'showTeamName' class="button visibility-hidden">Покажите названия сохраненных команд</button>
+    </p>
+</div>
+</body>
+</html>
