@@ -254,6 +254,7 @@ function showFillingUpWordsForNextPlayer() {
   //при первом нажатии здесь currentMember = 0 и currentTeam = 0
   if(currentMember === maxQuantityOfMemberInTeam){
     alert('all players has filled up words!')
+    shuffleArray(arrWords)
     currentMember = 0
     currentTeam   = 0
     changeVisibility(6)
@@ -327,12 +328,19 @@ const ulWordsInGame = document.getElementById('wordsInGame');
 const btnStartStep = document.getElementById('startStep');
 btnStartStep.addEventListener('click', startStep);
 
+function shuffleArray(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
+  }
+}
+
 function startStep(){
   btnStartStep.classList.add('visibility-hidden')
   guessingOfWordIsAvailable = true
   let tmr = setTimeout(() => {
     if(!allWordsWereGuessed){
-      alert('Прошло 30 секунд!')
+      alert('Прошло 30 секунд (на самом деле 5)!')
       btnFinishStep.classList.remove('visibility-hidden')
     }
     clearTimeout(tmr)//надо ли это?
